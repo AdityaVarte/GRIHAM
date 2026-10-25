@@ -1,0 +1,206 @@
+/* ================================================================= */
+/* GRIHAM DESIGN SYSTEM - ACCESSIBILITY (10 CORE CLIENT FEATURES)    */
+/* ================================================================= */
+
+html.accessibility-text-spacing,
+html.accessibility-text-spacing * {
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.18em !important;
+}
+
+html.accessibility-line-height,
+html.accessibility-line-height * {
+  line-height: 1.95 !important;
+}
+
+html[data-saturation="low"] {
+  filter: saturate(0) !important;
+}
+html[data-saturation="high"] {
+  filter: saturate(1.9) !important;
+}
+
+html.accessibility-invert {
+  filter: invert(1) hue-rotate(180deg) !important;
+  background-color: #000000 !important;
+}
+
+html.accessibility-large-cursor,
+html.accessibility-large-cursor * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="%23ffffff" stroke="%23000000" stroke-width="1.8"><polygon points="3,3 3,21 8,16 13,23 16,21 11,14 18,14"/></svg>'), auto !important;
+}
+
+html.accessibility-reduce-motion,
+html.accessibility-reduce-motion *,
+html.accessibility-reduce-motion *::before,
+html.accessibility-reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+html.accessibility-hide-images .brand-logo-pill svg,
+html.accessibility-hide-images .card-role-icon svg,
+html.accessibility-hide-images .placeholder-icon-wrap svg,
+html.accessibility-hide-images .photo-preview-box img {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.a11y-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.a11y-feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.75rem;
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: var(--radius-sm);
+  gap: 0.75rem;
+}
+
+.a11y-feature-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.a11y-feature-name {
+  font-size: calc(0.88rem * var(--font-scale));
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.a11y-feature-desc {
+  font-size: calc(0.72rem * var(--font-scale));
+  color: var(--text-secondary);
+}
+
+.text-scale-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--sheet-bg);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.btn-scale-step {
+  min-width: 36px;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  background: transparent;
+  transition: background-color var(--transition-base);
+}
+
+.btn-scale-step:active {
+  background: var(--color-brand-blue);
+  color: #ffffff;
+}
+
+.scale-value-display {
+  min-width: 44px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-left: 1px solid var(--btn-secondary-border);
+  border-right: 1px solid var(--btn-secondary-border);
+  padding: 0 0.25rem;
+}
+
+.saturation-chip-group {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.btn-sat-chip {
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-xs);
+  background: var(--sheet-bg);
+  border: 1px solid var(--btn-secondary-border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.btn-sat-chip.active {
+  background: var(--color-brand-blue);
+  color: #ffffff;
+  border-color: var(--color-brand-blue);
+}
+
+.touch-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.touch-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-track {
+  position: absolute;
+  inset: 0;
+  background-color: var(--btn-secondary-border);
+  border-radius: 34px;
+  transition: var(--transition-base);
+}
+
+.switch-track:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: var(--transition-base);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .switch-track {
+  background-color: var(--color-brand-blue);
+}
+
+input:checked + .switch-track:before {
+  transform: translateX(20px);
+}
+
+.btn-reset-a11y {
+  width: 100%;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: calc(0.88rem * var(--font-scale));
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.btn-reset-a11y:active {
+  background: rgba(239, 68, 68, 0.25);
+  transform: scale(0.985);
+}

@@ -1,0 +1,32 @@
+/* ================================================================= */
+/* GRIHAM DESIGN SYSTEM - RESPONSIVE MOBILE RULES                    */
+/* ================================================================= */
+
+@media (max-width: 360px) {
+  .app-screen-container {
+    padding: 0.85rem 0.95rem 1.25rem;
+  }
+  .otp-digit-input {
+    height: 46px;
+    font-size: 1.15rem;
+  }
+  .maint-metric-val {
+    font-size: 0.85rem;
+  }
+  .complaints-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem;
+  }
+  .photo-preview-grid {
+    grid-template-columns: 1fr;
+  }
+  .approvals-stats-band {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .amenities-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .amenity-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}

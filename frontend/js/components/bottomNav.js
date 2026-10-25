@@ -1,0 +1,1 @@
+// bottomNav.js component placeholder

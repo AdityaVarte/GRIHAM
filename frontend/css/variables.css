@@ -1,0 +1,137 @@
+/* ================================================================= */
+/* GRIHAM DESIGN SYSTEM - VARIABLES & THEMES                         */
+/* ================================================================= */
+
+/* =========================================
+   DESIGN TOKENS
+   ========================================= */
+:root {
+  /* Mobile Viewport Target Constraints */
+  --app-max-width: 430px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Typography Scale & Tokens */
+  --font-scale: 1;
+  --font-family-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Brand Accents */
+  --color-brand-blue: #3b82f6;
+  --color-brand-blue-hover: #2563eb;
+  --color-brand-amber: #f59e0b;
+  --color-brand-emerald: #10b981;
+  --color-brand-indigo: #6366f1;
+
+  /* Motion */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quick: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.22s var(--ease-quick);
+  --transition-smooth: 0.35s var(--ease-spring);
+}
+
+/* =========================================
+   LIGHT / DARK THEME
+   ========================================= */
+
+/* Dark Theme (Default) */
+[data-theme="dark"] {
+  --desktop-bg: #05070c;
+  --app-bg: #090e17;
+  --app-bg-gradient: radial-gradient(120% 80% at 50% -10%, #152238 0%, #090e17 60%, #060910 100%);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Liquid Glass Tokens */
+  --glass-bg: rgba(21, 32, 54, 0.65);
+  --glass-bg-hover: rgba(30, 45, 75, 0.75);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  
+  /* Card Role Themes */
+  --resident-tint: rgba(59, 130, 246, 0.12);
+  --resident-border: rgba(59, 130, 246, 0.25);
+  --resident-accent: #60a5fa;
+
+  --admin-tint: rgba(245, 158, 11, 0.12);
+  --admin-border: rgba(245, 158, 11, 0.25);
+  --admin-accent: #fbbf24;
+
+  --gatekeeper-tint: rgba(16, 185, 129, 0.12);
+  --gatekeeper-border: rgba(16, 185, 129, 0.25);
+  --gatekeeper-accent: #34d399;
+
+  /* Controls & Inputs */
+  --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+  --btn-secondary-border: rgba(255, 255, 255, 0.10);
+  --btn-secondary-text: #e2e8f0;
+
+  --input-bg: rgba(15, 23, 42, 0.75);
+  --input-border: rgba(255, 255, 255, 0.12);
+
+  --sheet-bg: #0f172a;
+  --sheet-border: rgba(255, 255, 255, 0.12);
+  --sheet-handle: rgba(255, 255, 255, 0.2);
+
+  --app-outer-shadow: 0 0 60px -15px rgba(0, 0, 0, 0.9);
+  --divider-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --desktop-bg: #e2e8f0;
+  --app-bg: #f8fafc;
+  --app-bg-gradient: radial-gradient(120% 80% at 50% -10%, #e0f2fe 0%, #f8fafc 60%, #f1f5f9 100%);
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  /* Liquid Glass Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-bg-hover: rgba(255, 255, 255, 0.9);
+  --glass-bg-subtle: rgba(0, 0, 0, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-border-hover: rgba(59, 130, 246, 0.3);
+  --glass-shadow: 0 10px 25px -4px rgba(100, 116, 139, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  /* Card Role Themes */
+  --resident-tint: rgba(59, 130, 246, 0.08);
+  --resident-border: rgba(59, 130, 246, 0.2);
+  --resident-accent: #2563eb;
+
+  --admin-tint: rgba(245, 158, 11, 0.08);
+  --admin-border: rgba(245, 158, 11, 0.25);
+  --admin-accent: #d97706;
+
+  --gatekeeper-tint: rgba(16, 185, 129, 0.08);
+  --gatekeeper-border: rgba(16, 185, 129, 0.2);
+  --gatekeeper-accent: #059669;
+
+  /* Controls & Inputs */
+  --btn-secondary-bg: rgba(255, 255, 255, 0.85);
+  --btn-secondary-border: rgba(203, 213, 225, 0.8);
+  --btn-secondary-text: #1e293b;
+
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --input-border: rgba(203, 213, 225, 0.9);
+
+  --sheet-bg: #ffffff;
+  --sheet-border: rgba(226, 232, 240, 0.9);
+  --sheet-handle: rgba(0, 0, 0, 0.15);
+
+  --app-outer-shadow: 0 20px 50px -10px rgba(71, 85, 105, 0.25);
+  --divider-color: rgba(0, 0, 0, 0.06);
+}
